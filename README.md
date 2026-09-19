@@ -21,7 +21,7 @@ Add and manage your weekly classes with subject, instructor, room, and class tim
 View your classes for the current day. If there are no classes, the app clearly shows that you have a free day.
 
 <p align="center">
-  <img src="./assets/screenshots/today.png" width="300" />
+  <img src="./assets/screenshots/today.png.jpeg" width="300" />
 </p>
 
 ---
@@ -31,7 +31,7 @@ View your classes for the current day. If there are no classes, the app clearly 
 Track attendance for every subject with attendance percentage, present/absent counts, and alerts when attendance is low.
 
 <p align="center">
-  <img src="./assets/screenshots/attendance.png" width="300" />
+  <img src="./assets/screenshots/attendance.png.jpeg" width="300" />
 </p>
 
 ---
