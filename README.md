@@ -1,56 +1,334 @@
-# Welcome to your Expo app 👋
+# 📚 Student Attendance & Timetable
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native mobile application designed to help students manage their **class timetable**, view their **daily schedule**, and track **subject-wise attendance** in one place.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Screenshots
 
-   ```bash
-   npm install
-   ```
+### 🗓️ Timetable
 
-2. Start the app
+Add and manage your weekly classes with subject, instructor, room, and class timings.
 
-   ```bash
-   npx expo start
-   ```
+<p align="center">
+  <img src="./assets/screenshots/timetable.png" width="300" />
+</p>
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 📅 Daily Schedule
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+View your classes for the current day. If there are no classes, the app clearly shows that you have a free day.
 
-## Get a fresh project
+<p align="center">
+  <img src="./assets/screenshots/today.png" width="300" />
+</p>
 
-When you're ready, run:
+---
+
+### 📊 Attendance
+
+Track attendance for every subject with attendance percentage, present/absent counts, and alerts when attendance is low.
+
+<p align="center">
+  <img src="./assets/screenshots/attendance.png" width="300" />
+</p>
+
+---
+
+## ✨ Features
+
+### 🗓️ Timetable Management
+
+- Add classes to your weekly timetable
+- Set class start and end times
+- Add subject name and course code
+- Add instructor information
+- Add classroom/location
+- View classes day-wise
+- Edit existing classes
+- Remove classes
+
+### 📅 Daily Schedule
+
+- View today's classes
+- See upcoming classes
+- View class timings and locations
+- Automatically display a free-day screen when there are no classes
+
+### ✅ Attendance Tracking
+
+- Mark classes as **Present** or **Absent**
+- Track attendance subject-wise
+- View total classes attended
+- View total classes conducted
+- View attendance percentage
+- Identify subjects with low attendance
+
+### 🎯 Attendance Goals
+
+The app helps you understand how many upcoming classes you need to attend to reach your desired attendance percentage.
+
+For example:
+
+> Attend the next 5 classes to reach 75%.
+
+---
+
+## 🛠️ Tech Stack
+
+- **React Native**
+- **TypeScript**
+- **Expo**
+- **React Navigation**
+- **pnpm**
+
+---
+
+## 📂 Project Structure
+
+```text
+.
+├── assets/
+│   └── screenshots/
+│       ├── timetable.png
+│       ├── today.png
+│       └── attendance.png
+│
+├── src/
+│   ├── components/
+│   ├── screens/
+│   ├── navigation/
+│   ├── services/
+│   └── ...
+│
+├── App.tsx
+├── package.json
+├── pnpm-lock.yaml
+└── README.md
+````
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+* [Node.js](https://nodejs.org/)
+* [pnpm](https://pnpm.io/)
+* [Expo Go](https://expo.dev/go) for testing on a physical device
+* Android Studio for Android Emulator (optional)
+
+You can check your installed versions using:
 
 ```bash
-npm run reset-project
+node -v
+pnpm -v
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-### Other setup steps
+## 📥 Clone the Repository
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Clone the repository using Git:
 
-## Learn more
+```bash
+git clone https://github.com/rahul820913/attendence_App.git
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+cd attendence_App
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 📦 Install Dependencies
 
-Join our community of developers creating universal apps.
+Install all project dependencies using pnpm:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+pnpm install
+```
+
+---
+
+## ▶️ Run the Application
+
+Start the Expo development server:
+
+```bash
+pnpm exec expo start
+```
+
+After the development server starts, you can run the application using:
+
+### 📱 Physical Android/iOS Device
+
+Install **Expo Go** on your phone and scan the QR code shown in the terminal.
+
+### 🤖 Android Emulator
+
+Make sure your Android Emulator is running, then press:
+
+```text
+a
+```
+
+in the Expo terminal.
+
+Or run:
+
+```bash
+pnpm exec expo start --android
+```
+
+### 🌐 Web
+
+If web support is configured:
+
+```bash
+pnpm exec expo start --web
+```
+
+---
+
+# ⚡ Quick Start
+
+If you already have Node.js and pnpm installed, simply run:
+
+```bash
+git clone https://github.com/rahul820913/attendence_App.git
+cd attendence_App
+pnpm install
+pnpm exec expo start
+````
+
+Then scan the QR code using **Expo Go** or open the application in an emulator.
+
+---
+
+## 📖 How It Works
+
+### 1. Add Your Timetable
+
+Create your weekly schedule by adding:
+
+* Subject name
+* Course code
+* Instructor
+* Classroom
+* Start time
+* End time
+* Day
+
+The timetable is then used to generate your daily schedule.
+
+### 2. View Today's Classes
+
+The **Today** section automatically shows the classes scheduled for the current day.
+
+If no classes are scheduled, the app displays:
+
+> **No classes today**
+
+### 3. Track Attendance
+
+After attending a class, mark it as **Present**.
+
+If you miss a class, mark it as **Absent**.
+
+The attendance percentage is calculated using:
+
+```text
+Attendance % = (Classes Present / Total Classes) × 100
+```
+
+---
+
+## 📊 Attendance Example
+
+Suppose you have:
+
+```text
+Present = 7
+Absent  = 4
+Total   = 11
+```
+
+Your attendance will be:
+
+```text
+7 / 11 × 100 = 63.6%
+```
+
+The application can also show how many upcoming classes you need to attend to reach a target percentage.
+
+---
+
+## 🔮 Future Improvements
+
+* 🔔 Class reminders and notifications
+* 📈 Detailed attendance analytics
+* 🎯 Attendance prediction
+* 📅 Calendar integration
+* ☁️ Cloud synchronization
+* 🔐 User authentication
+* 📊 Semester-wise attendance reports
+* 🌙 Dark/Light theme support
+* 📤 Export attendance records
+* 🔄 Backup and restore timetable
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome.
+
+### Fork the repository
+
+Create your own fork of this repository on GitHub.
+
+### Create a new branch
+
+```bash
+git checkout -b feature/your-feature
+```
+
+### Make your changes
+
+After making your changes, check the project and test the application.
+
+### Commit your changes
+
+```bash
+git add .
+git commit -m "Add your feature"
+```
+
+### Push your branch
+
+```bash
+git push origin feature/your-feature
+```
+
+Then open a **Pull Request** on GitHub.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Rahul Singh Meena**
+
+Built with ❤️ using React Native and TypeScript.
+
+
+
+

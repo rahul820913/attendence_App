@@ -1,65 +1,75 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
-
-import '@/global.css';
-
-import { Platform } from 'react-native';
-
+// Powered by OnSpace.AI
 export const Colors = {
-  light: {
-    text: '#000000',
-    background: '#ffffff',
-    backgroundElement: '#F0F0F3',
-    backgroundSelected: '#E0E1E6',
-    textSecondary: '#60646C',
-  },
-  dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
-  },
-} as const;
+  // Base
+  bg: '#0F1117',
+  surface: '#1A1D27',
+  surfaceElevated: '#22263A',
+  border: '#2A2E42',
+  borderLight: '#343850',
 
-export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
+  // Brand
+  primary: '#6C8EFF',
+  primaryDim: '#3D5299',
+  primaryLight: '#8AAAFF',
+  accent: '#A78BFA',
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
-  },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
-  },
-  web: {
-    sans: 'var(--font-display)',
-    serif: 'var(--font-serif)',
-    rounded: 'var(--font-rounded)',
-    mono: 'var(--font-mono)',
-  },
-});
+  // Text
+  textPrimary: '#F0F2FF',
+  textSecondary: '#9EA3C0',
+  textMuted: '#5A6080',
+
+  // Semantic
+  success: '#34D399',
+  successDim: '#064E3B',
+  danger: '#F87171',
+  dangerDim: '#7F1D1D',
+  warning: '#FBBF24',
+  warningDim: '#78350F',
+  cancelled: '#6B7280',
+
+  // Subject colors (cycling palette)
+  subjectColors: [
+    '#6C8EFF', // blue
+    '#A78BFA', // purple
+    '#34D399', // green
+    '#FBBF24', // amber
+    '#F87171', // red
+    '#38BDF8', // sky
+    '#FB923C', // orange
+    '#E879F9', // fuchsia
+  ],
+};
 
 export const Spacing = {
-  half: 2,
-  one: 4,
-  two: 8,
-  three: 16,
-  four: 24,
-  five: 32,
-  six: 64,
-} as const;
+  xs: 4,
+  sm: 8,
+  md: 16,
+  lg: 24,
+  xl: 32,
+  xxl: 48,
+};
 
-export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
-export const MaxContentWidth = 800;
+export const Radius = {
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 20,
+  full: 999,
+};
+
+export const FontSize = {
+  xs: 11,
+  sm: 13,
+  base: 15,
+  md: 17,
+  lg: 20,
+  xl: 24,
+  xxl: 30,
+};
+
+export const FontWeight = {
+  regular: '400' as const,
+  medium: '500' as const,
+  semibold: '600' as const,
+  bold: '700' as const,
+};
