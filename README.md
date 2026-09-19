@@ -11,7 +11,7 @@ A React Native mobile application designed to help students manage their **class
 Add and manage your weekly classes with subject, instructor, room, and class timings.
 
 <p align="center">
-  <img src="./assets/screenshots/timetable.png" width="300" />
+  <img src="./assets/screenshots/timetable.png.jpeg" width="300" />
 </p>
 
 ---
